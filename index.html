@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egypt Tours</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light" 
+    style="position: fixed; top: 0; width: 100%; z-index: 1000; transition: background-color 0.3s ease, box-shadow 0.3s ease; background-color: transparent; box-shadow: none;">
+   <div class="container-fluid">
+       <img src="images/122.png" alt="Logo" width="80" height="60" class="d-inline-block align-text-top">
+       <a class="navbar-brand shiny-text" href="#">
+           World Travel
+           <span style="border-left: 2px solid rgba(133, 165, 179, 0.637); height: 30px; margin-left: 2px; display: inline-block; vertical-align: middle;"></span>
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarNav">
+           <ul class="navbar-nav me-auto">
+               <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
+               <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle trip-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                       <span class="first-letter">T</span>rips
+                   </a>
+                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <li><a class="dropdown-item" href="#">Dubai</a></li>
+                       <li><a class="dropdown-item" href="#">London</a></li>
+                       <hr>
+                       <li><a class="dropdown-item" href="#">Rome</a></li>
+                       <li><a class="dropdown-item" href="#">Istanbul</a></li>
+                       <li><a class="dropdown-item" href="#">Moscow</a></li>
+                       <li><a class="dropdown-item" href="#">Singapore</a></li>
+                       <li><a class="dropdown-item" href="#">More...</a></li>
+                   </ul>
+               </li>
+               <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+           </ul>
+           <form class="d-flex">
+               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+           </form>
+           <button class="btn custom-search-btn btn-sm ms-2" type="submit">Search</button>
+           <button class="btn custom-login-btn ms-2 btn-sm">Login</button>
+       </div>
+   </div>
+</nav>
+
+<!-- Background Section -->
+
+<div class="container-fluid bg-container" id="background" style="margin-top: 70px; position: relative; width: 100%; padding: 0;">
+    <div id="backgroundCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" style="height: 100vh;">
+        <div class="carousel-inner">
+            <!-- الصورة الأولى -->
+            <div class="carousel-item active" style="background-image: url('images/3.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
+                <div class="overlay" style="background-color: rgba(4, 56, 78, 0.5); color: white; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 10px; text-align: center; width: 90%; max-width: 800px; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="text-center">
+                        <h1 id="bg-title" class="fs-2 fs-md-1">Your Adventure Awaits</h1>
+                        <p id="bg-description" class="fs-6 fs-md-5">Embark on a journey to unexplored places!</p>
+                        <a href="#" class="btn btn-primary mt-2 btn-with-underline" style="background-color: #0e75a1; border: #0a5c80;">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+            <!-- الصورة الثانية -->
+            <div class="carousel-item" style="background-image: url('images/12.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
+                <div class="overlay" style="background-color: rgba(4, 56, 78, 0.5); color: white; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 10px; text-align: center; width: 90%; max-width: 800px; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="text-center">
+                        <h1 id="bg-title" class="fs-2 fs-md-1">Explore the Hidden Gems</h1>
+                        <p id="bg-description" class="fs-6 fs-md-5">Find beautiful places off the beaten path.</p>
+                        <a href="#" class="btn btn-primary mt-2 btn-with-underline" style="background-color: #0e75a1; border: #0a5c80;">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+            <!-- الصورة الثالثة -->
+            <div class="carousel-item" style="background-image: url('images/11.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
+                <div class="overlay" style="background-color: rgba(4, 56, 78, 0.5); color: white; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 10px; text-align: center; width: 90%; max-width: 800px; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="text-center">
+                        <h1 id="bg-title" class="fs-2 fs-md-1">Unforgettable Experiences</h1>
+                        <p id="bg-description" class="fs-6 fs-md-5">Create memories that last a lifetime.</p>
+                        <a href="#" class="btn btn-primary mt-2 btn-with-underline" style="background-color: #0e75a1; border: #0a5c80;">JStart Your Journey</a>
+                    </div>
+                </div>
+            </div>
+            <!-- الصورة الرابعة -->
+            <div class="carousel-item" style="background-image: url('images/9.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
+                <div class="overlay" style="background-color: rgba(4, 56, 78, 0.5); color: white; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 10px; text-align: center; width: 90%; max-width: 800px; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="text-center">
+                        <h1 id="bg-title" class="fs-2 fs-md-1">Your Path to Paradise</h1>
+                        <p id="bg-description" class="fs-6 fs-md-5">Explore the best beach destinations.</p>
+                        <a href="#" class="btn btn-primary mt-2 btn-with-underline" style="background-color: #0e75a1; border: #0a5c80;">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+            <!-- الصورة الخامسة -->
+            <div class="carousel-item" style="background-image: url('images/05.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
+                <div class="overlay" style="background-color: rgba(4, 56, 78, 0.5); color: white; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 10px; text-align: center; width: 90%; max-width: 800px; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="text-center">
+                        <h1 id="bg-title" class="fs-2 fs-md-1">Majestic Mountains Await</h1>
+                        <p id="bg-description" class="fs-6 fs-md-5">Hike the highest peaks for breathtaking views.</p>
+                        <a href="#" class="btn btn-primary mt-2 btn-with-underline" style="background-color: #0e75a1; border: #0a5c80;">AStart Your Journey</a>
+                    </div>
+                </div>
+            </div>
+            <!-- الصورة السادسة -->
+            <div class="carousel-item" style="background-image: url('images/7.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100%;">
+                <div class="overlay" style="background-color: rgba(4, 56, 78, 0.5); color: white; position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border-radius: 10px; text-align: center; width: 90%; max-width: 800px; height: auto; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <div class="text-center">
+                        <h1 id="bg-title" class="fs-2 fs-md-1">City Lights and Nightlife</h1>
+                        <p id="bg-description" class="fs-6 fs-md-5">Discover the vibrant nightlife in the world’s best cities.</p>
+                        <a href="#" class="btn btn-primary mt-2 btn-with-underline" style="background-color: #0e75a1; border: #0a5c80;">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- عناصر التحكم -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#backgroundCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#backgroundCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- المؤشرات -->
+        <div class="carousel-indicators" style="margin-bottom: 55px;">
+            <button type="button" data-bs-target="#backgroundCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#backgroundCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#backgroundCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#backgroundCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#backgroundCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#backgroundCarousel" data-bs-slide-to="5"></button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="social-icons">
+    <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="icon"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+  </div>
+    
+
+  <!-- Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- الفورم داخل الـ Modal -->
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" >
+              <div class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+            <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">RememberMe</label>
+              </div>  
+          </form>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary1">Login</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+<!-- /////////////////////////////////////////// -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 welcome-section">
+            <a class="navbar-brand shiny-text1" href="#">WELCOME</a>
+
+            <p>Are you planning to visit Egypt? We offer the ultimate tour in Egypt, covering Cairo, Alex. From a one day trip to a 10 day dream vacation, we will take care of all your needs. 24/7 Customer Service.</p>
+            <button class="btn btn-learn-more">Learn More</button>
+        </div>
+    </div>
+</div>
+<hr>
+<!-- ////////////////////////// -->
+<div class="container-fluid" style="background-color: #2d758bdd; height: 150px; color: white; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+    <p class="mb-0" style="font-size: 24px;">Join Our Exclusive Travel Campaign Now!</p>
+</div>
+
+<br>
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background: linear-gradient(to bottom, #ffffff, #d3d3d3); color: rgb(0, 0, 0); box-shadow: 4px 4px 8px rgba(94, 92, 92, 0.76); font-size: 20px;">
+                <span style="font-weight: bold;font-size: 22px; background: linear-gradient(180deg,  #940c17,#0689c1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Enchanting Kyoto</span>
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="background-color: #fcfcfc;">
+                <strong>Kyoto, Japan</strong> is renowned for its beautiful temples, traditional tea houses, and stunning gardens. Take a stroll through the Arashiyama Bamboo Grove, visit the iconic Kinkaku-ji (Golden Pavilion), and experience the serene atmosphere of the city’s historic districts.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="background: linear-gradient(to bottom, #ffffff, #d3d3d3); color: rgb(0, 0, 0); box-shadow: 4px 4px 8px rgba(94, 92, 92, 0.76);font-size: 20px;">
+                <span style="font-weight: bold;font-size: 22px; background: linear-gradient(180deg,  #940c17,#0689c1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Adventure in New Zealand</span>
+            </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="background-color: #fefefe;">
+                <strong>New Zealand</strong> offers breathtaking landscapes from mountains to beaches. Enjoy activities like bungee jumping in Queenstown, exploring the geothermal wonders of Rotorua, and hiking the famous Tongariro Alpine Crossing.
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="background: linear-gradient(to bottom, #ffffff, #d3d3d3); color: rgb(0, 0, 0); box-shadow: 4px 4px 8px rgba(94, 92, 92, 0.76);font-size: 20px;">
+                <span style="font-weight: bold;font-size: 22px; background: linear-gradient(180deg,  #940c17,#0689c1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Cultural Treasures of Istanbul</span>
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body" style="background-color: #ffffff;">
+                <strong>Istanbul, Turkey</strong> is a city that bridges Europe and Asia, rich in history and culture. Explore the magnificent Hagia Sophia, the bustling Grand Bazaar, and the stunning Blue Mosque, while enjoying delicious Turkish cuisine at local restaurants.
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /////////////////////////////// -->
+
+<hr>
+<div class="container-fluid p-0">
+    <div class="row g-0">
+        <!-- البطاقة الأولى -->
+        <div class="col-12 mb-4">
+            <div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; border: none;">
+                <div class="card-header" style="background-color: #0d7f9ead; font-size: 30px; color: white; font-weight: bold; text-align: center; height: 60px;">
+                    Travel Notes
+                </div>
+                <div class="card-body" style="background-color: #9ecbd7ce; border-left: 4px solid #8fb5b7; padding: 15px; text-align: left;">
+                    <label for="itinerary" style="font-weight: bold; font-size: 18px; text-align: left !important; display: inline-block; width: 100%; color: white;">Write Your Travel Notes <span style="color: #0d718d;">Press Here</span></label>
+                    <br>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-primary" style="background-color: #0d718d; border: none; font-size: 18px; transition: background-color 0.3s ease;" 
+                        onclick="copyText('notes1', 'copiedMessage1')" 
+                        onmouseover="this.style.backgroundColor='#298f99';" 
+                        onmouseout="this.style.backgroundColor='#0d718d';">Copy</button>
+                        <span id="copiedMessage1" class="copied-message" style="position: absolute; bottom: 130px; left: 85px; background-color: white; padding: 5px 10px; border: 1px solid #8fb5b7; border-radius: 0 15px 15px 15px; font-size: 16px; color: rgb(0, 0, 0); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Copied</span>
+                    </div>
+                    <br>
+                    <textarea id="notes1" class="form-control mb-3" rows="4" placeholder="Write your notes here:" style="border: none;"></textarea>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- البطاقة الثانية -->
+        <div class="col-12 mb-4">
+            <div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; border: none;">
+                <div class="card-header" style="background-color: #0d7f9ead; font-size: 30px; color: white; font-weight: bold; text-align: center; height: 60px;">
+                    Places to Visit
+                </div>
+                <div class="card-body" style="background-color: #9ecbd7ce; border-left: 4px solid #8fb5b7; padding: 15px; text-align: left;">
+                    <label for="itinerary" style="font-weight: bold; font-size: 18px; text-align: left !important; display: inline-block; width: 100%; color: white;">Write the Places You Want to Visit <span style="color: #0d718d;">Press Here</span></label>
+                    <br>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-primary" style="background-color: #0d718d; border: none; font-size: 18px; transition: background-color 0.3s ease;" 
+                        onclick="copyText('placesToVisit', 'copiedMessage2')" 
+                        onmouseover="this.style.backgroundColor='#298f99';" 
+                        onmouseout="this.style.backgroundColor='#0d718d';">Copy</button>
+                        <span id="copiedMessage2" class="copied-message" style="position: absolute; bottom: 130px; left: 85px; background-color: white; padding: 5px 10px; border: 1px solid #8fb5b7; border-radius: 0 15px 15px 15px; font-size: 16px; color: rgb(0, 0, 0); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Copied</span>
+                    </div>
+                    <br>
+                    <textarea id="placesToVisit" class="form-control mb-3" rows="4" placeholder="Write places here:" style="border: none;"></textarea>
+                </div>
+            </div>
+        </div>
+           <hr>
+        <!-- البطاقة الثالثة -->
+        <div class="col-12 mb-4">
+            <div class="card" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; border: none;">
+                <div class="card-header" style="background-color: #0d7f9ead; font-size: 30px; color: white; font-weight: bold; text-align: center; height: 60px;">
+                    Travel Itinerary
+                </div>
+                <div class="card-body" style="background-color: #9ecbd7ce; border-left: 4px solid #8fb5b7; padding: 15px; text-align: left;">
+                    <label for="itinerary" style="font-weight: bold; font-size: 19px; text-align: left !important; display: inline-block; width: 100%;color: #ffffff;">Write Your Travel Itinerary <span style="color: #0d718d;">Press Here</span></label>
+                    <br>
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-primary" style="background-color: #0d718d; border: none; font-size: 18px; transition: background-color 0.3s ease;" 
+                        onclick="copyText('itinerary', 'copiedMessage3')" 
+                        onmouseover="this.style.backgroundColor='#298f99';" 
+                        onmouseout="this.style.backgroundColor='#0d718d';">Copy</button>
+                        <span id="copiedMessage3" class="copied-message" style="position: absolute; bottom: 130px; left: 85px; background-color: white; padding: 5px 10px; border: 1px solid #8fb5b7; border-radius: 0 15px 15px 15px; font-size: 16px; color: rgb(0, 0, 0); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Copied</span>
+                    </div>
+                    <br>
+                    <textarea id="itinerary" class="form-control mb-3" rows="4" placeholder="Write your itinerary here:" style="border: none;"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- //////////////////////////////////////// -->
+<div class="container-fluid fashion-reviews-background d-flex justify-content-center align-items-center">
+</div>
+
+<div class="container-fluid" style="background-color: #2d758bdd; height: 90px; color: white; display: flex; align-items: center; justify-content: center;">
+    <span style="font-weight: bold; font-size: 30px; background: linear-gradient(180deg, #ba0a18, #056f9c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Explore Amazing Destinations Worldwide</span>
+</div>
+
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-1">
+                <img src="images/21.jpg" class="card-img-top" alt="Paris">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title0 mb-0">PARIS</h5>
+                        <a href="#" class="btn btn-info btn-sm">Know More</a>
+                    </div>
+                    <!-- <div class="mt-2"> -->
+                        <p class="card-text">City of Lights</p>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-1">
+                <img src="images/23.jpg" class="card-img-top" alt="New York">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title0">NEW YORK</h5>
+                        <a href="#" class="btn btn-info">Know More</a>
+                    </div>
+                    <p class="card-text">The Big Apple</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-1">
+                <img src="images/24.jpg" class="card-img-top" alt="Tokyo">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title0">TOKYO</h5>
+                        <a href="#" class="btn btn-info">Know More</a>
+                    </div>
+                    <p class="card-text">A blend of tradition and modernity</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-1">
+                <img src="images/25.jpg" class="card-img-top" alt="Singapore">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title0">SINGAPORE</h5>
+                        <a href="#" class="btn btn-info">Know More</a>
+                    </div>
+                    <p class="card-text">A city of gardens and skyscrapers</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-1">
+                <img src="images/26.jpg" class="card-img-top" alt="Rome">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title0">ROME</h5>
+                        <a href="#" class="btn btn-info">Know More</a>
+                    </div>
+                    <p class="card-text">The Eternal City</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card card-1">
+                <img src="images/27.jpg" class="card-img-top" alt="Dubai">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title0" >DUBAI</h5>
+                        <a href="#" class="btn btn-info">Know More</a>
+                    </div>
+                    <p class="card-text">A city of luxury and innovation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center custom-margin-left">
+            <div class="card card-1">
+                <img src="images/29.jpg" class="card-img-top" alt="Istanbul">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title0" >ISTANBUL</h5>
+                        <a href="#" class="btn btn-info">Know More</a>
+                    </div>
+                    <p class="card-text">Where East meets West</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- إضافة مسافة من اليسار 30px للعنصر التالي -->
+        <div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center  custom-margin-left">
+            <div class="card card-1">
+                <img src="images/27.jpg" class="card-img-top" alt="Dubai">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title" style="color: #2d758bf2;">DUBAI</h5>
+                        <a href="#" class="btn btn-info">Know More</a>
+                    </div>
+                    <p class="card-text">A city of luxury and innovation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ///////////////////////////////////////// -->
+<div class="container-fluid fashion-reviews-background1 d-flex justify-content-center align-items-center">
+</div>
+<!-- ///////////////////////////// -->
+
+
+<div class="container-fluid" style="background-color: #2d758bdd; height: 90px; color: white; display: flex; align-items: center; justify-content: center;">
+    <span style="font-weight: bold; font-size: 33px; background: linear-gradient(180deg, #940c17, #0689c1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">THANKS FOR</span>
+</div>
+
+<br><br>
+<div class="container my-5">
+    <div class="row justify-content-center g-2"> 
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-4"> 
+            <div class="card card-2 bg-dark text-white" style="height: 100%;"> 
+                <img src="images/552.jpg" class="card-img img-fluid" alt="Background Image" style="height: 100%;">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
+                    <h5 class="card-title">All thanks and appreciation</h5>
+                    <p class="text-muted" style="color: white !important;">
+                        <i class="far fa-clock" style="font-size: 14px;"></i> October 15, 2020
+                    </p>
+                    <img src="images/552.jpg" class="profile-img rounded-circle" alt="Profile Image">
+                    <p class="card-text1">Eng. sara Ahmed<br>Web Development</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-4"> 
+            <div class="card card-2 bg-dark text-white" style="height: 100%;"> 
+                <img src="images/441.jpg" class="card-img img-fluid" alt="Background Image" style="height: 100%;">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
+                    <h5 class="card-title">All thanks and appreciation</h5>
+                    <p class="text-muted" style="color: white !important;">
+                        <i class="far fa-clock" style="font-size: 14px;"></i> October 15, 2020
+                    </p>
+                    <img src="images/441.jpg" class="profile-img rounded-circle" alt="Profile Image">
+                    <p class="card-text1">Eng. Esraa Waleed<br>AI Engineer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-4"> 
+            <div class="card card-2 bg-dark text-white" style="height: 100%;"> 
+                <img src="images/442.jpg" class="card-img img-fluid" alt="Background Image" style="height: 100%;">
+                <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center">
+                    <h5 class="card-title">All thanks and appreciation</h5>
+                    <p class="text-muted" style="color: white !important;">
+                        <i class="far fa-clock" style="font-size: 14px;"></i> October 15, 2020
+                    </p>
+                    <img src="images/442.jpg" class="profile-img rounded-circle" alt="Profile Image">
+                    <p class="card-text1">Eng. Sally Maraush<br>Director of UI/UX</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ////////////////////////////////////////////////// -->
+  
+<div class="container mt-5">
+    <h1 class="text-center mb-5" style="background: linear-gradient(180deg, #9c121e, #0e7fb0); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        Discover Exciting Adventures    </h1>
+    <!-- بطاقة الوجهة الأولى -->
+    <div class="container">
+        <!-- بطاقة الوجهة الأولى -->
+        <div class="row podcast-card mb-5">
+            <div class="col-lg-7 col-md-12 order-2 order-lg-1 podcast-content">
+                <h2 class="text-primary2">Bali Bliss</h2>
+                <p class="underline"style="border-bottom: 4px solid #075e1bda;"><i class="far fa-calendar-alt"></i> Best Season: October</p>
+                <p>Experience the vibrant culture, stunning beaches, and lush landscapes of Bali. A perfect blend of relaxation </p>
+                <div class="podcast-buttons">
+                    <button class="btn btn-dark">
+                        <i class="fas fa-map-marker-alt"></i> Discover Bali
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-calendar-week"></i> 10 Days
+                    </button>
+                    <button class="btn btn-primary btn-bali">
+                        <i class="fas fa-plane"></i> Plan Trip
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 p-0 order-1 order-lg-2">
+                <img src="images/99.jpg" alt="Bali Destination Image" class="podcast-image w-100">
+            </div>
+        </div>
+    
+        <!-- بطاقة الوجهة الثانية -->
+        <div class="row podcast-card mb-5 special-card " style="width: 100%;margin: 0 auto; ">
+            <div class="col-lg-5 col-md-12 p-0 order-1 order-lg-1">
+                <img src="images/98.jpg" alt="Thailand Destination Image" class="podcast-image1 w-100">
+            </div>
+            <div class="col-lg-7 col-md-12 order-2 order-lg-2 podcast-content">
+                <h2 class="text-primary2">Thailand Treasures</h2>
+                <p class="underline"style="border-bottom: 4px solid  #ac553c; ;"><i class="far fa-calendar-alt"></i> November - February</p>
+                <p>Dive into the rich culture, breathtaking islands, and delicious street food of Thailand. A true paradise for travelers!</p>
+                <div class="podcast-buttons">
+                    <button class="btn btn-dark">
+                        <i class="fas fa-map-marker-alt"></i> Explore Thailand
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-calendar-week"></i> 14 Days
+                    </button>
+                    <button class="btn btn-primary btn-thailand">
+                        <i class="fas fa-plane"></i> Plan Trip
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <!-- بطاقة الوجهة الثالثة -->
+        <div class="row podcast-card mb-5">
+            <div class="col-lg-7 col-md-12 order-2 order-lg-1 podcast-content">
+                <h2 class="text-primary2">Santorini Views</h2>
+                <p class="underline" style="border-bottom: 4px solid #8e5476ea;"><i class="far fa-calendar-alt"></i> May - October</p>
+                <p>Marvel at the stunning sunsets and beautiful architecture in Santorini. A romantic escape like no other!</p>
+                <div class="podcast-buttons">
+                    <button class="btn btn-dark">
+                        <i class="fas fa-map-marker-alt"></i> Santorini Guide
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-calendar-week"></i> 7 Days
+                    </button>
+                    <button class="btn btn-primary btn-santorini">
+                        <i class="fas fa-plane"></i> Plan Trip
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12 p-0 order-1 order-lg-2">
+                <img src="images/97.jpg" alt="Santorini Destination Image" class="podcast-image w-100">
+            </div>
+        </div>
+    
+        <!-- بطاقة الوجهة الرابعة -->
+        <div class="row podcast-card mb-5 special-card">
+            <div class="col-lg-5 col-md-12 p-0 order-1 order-lg-1">
+                <img src="images/95.jpg" alt="Machu Picchu Destination Image" class="podcast-image1 w-100">
+            </div>
+            <div class="col-lg-7 col-md-12 order-2 order-lg-2 podcast-content">
+                <h2 class="text-primary2">Machu Picchu Magic</h2>
+                <p class="underline"style="border-bottom: 4px solid #075e1bda;"><i class="far fa-calendar-alt"></i> April - October</p>
+                <p>Embark on a journey to the ancient ruins of Machu Picchu. A breathtaking experience that blends history </p>
+                <div class="podcast-buttons">
+                    <button class="btn btn-dark">
+                        <i class="fas fa-map-marker-alt"></i> Explore Machu Picchu
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-calendar-week"></i> 7 Days
+                    </button>
+                    <button class="btn btn-primary btn-machu" >
+                        <i class="fas fa-plane"></i> Plan Trip
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ////////////////////////////////////////// -->
+    
+    <div class="container py-5">
+        <h2 class="text-center mb-4 text-primary fw-bold" style="background: linear-gradient(180deg, #9c121e, #0e7fb0); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-top: -10px;font-size: 35px;">
+            JOIN US
+        </h2>       
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-5 justify-content-center">
+            <div class="col-auto">
+                <div class="social-card mx-auto">
+                    <div class="title">Subscribe Now</div>
+                    <div class="social-content">
+                        <img src="images/94.png" alt="Twitter" class="social-icon" />
+                    </div>
+                    <a href="#" class="link">Go to link</a>
+                </div>
+            </div>
+        
+            <div class="col-auto">
+                <div class="social-card mx-auto">
+                    <div class="title">Follow</div>
+                    <div class="social-content">
+                        <img src="images/93.png" alt="whatsapp" class="social-icon" />
+                    </div>
+                    <a href="#" class="link">Go to link</a>
+                </div>
+            </div>
+        
+            <div class="col-auto">
+                <div class="social-card mx-auto">
+                    <div class="title">Like the page</div>
+                    <div class="social-content">
+                        <img src="images/92.png" alt="linkedin" class="social-icon" />
+                    </div>
+                    <a href="#" class="link">Go to link</a>
+                </div>
+            </div>
+        
+            <div class="col-auto">
+                <div class="social-card mx-auto">
+                    <div class="title">Watch videos</div>
+                    <div class="social-content">
+                        <img src="images/91.png" alt="instagram" class="social-icon" />
+                    </div>
+                    <a href="#" class="link">Go to link</a>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+  <!-- ///////////////////////////////////////// -->
+  <div class="custom-main-container container-fluid">
+    <div class="custom-info-section row">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+            <hr class="custom-h2">
+            <div class="custom-info-card">
+                <div style="display: flex; align-items: center;">
+                    <img src="images/999.png" alt="Company Logo" width="80" style="margin-right: 10px;">
+                    <h4 style="margin: 0; font-weight: bold;">Good Company</h4>
+                </div>
+                <hr class="custom-h2">
+                <p>Tel: 000-000-000</p>
+                <p>Address: EGYPT</p>
+                <p>Fax: 000-000-000</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+            <hr class="custom-h2">
+            <div class="custom-info-card">
+                <div style="display: flex; align-items: center;">
+                    <img src="images/999.png" alt="Links Logo" width="80" style="margin-right: 10px;">
+                    <h4 style="margin: 0; font-weight: bold;">Important Links</h4>
+                </div>
+                <hr class="custom-h2">
+                <p class="custom-highlight-text">Visit Us</p>
+                <p class="custom-highlight-text">Take a look</p>
+                <p class="custom-highlight-text">Your health is more important</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+            <hr class="custom-h2">
+            <div class="custom-info-card">
+                <div style="display: flex; align-items: center;">
+                    <img src="images/999.png" alt="Vision Logo" width="80" style="margin-right: 10px;">
+                    <h4 style="margin: 0; font-weight: bold;">Vision</h4>
+                </div>
+                <hr class="custom-h2">
+                <p>Services for all</p>
+                <p>Provide best services</p>
+                <p>You will be better than before</p>
+            </div>
+        </div>
+    </div>
+
+    <hr class="custom-h2">
+    <div class="custom-footer">
+        COPYRIGHT © 2020 SHIMAA HUSSIEN EL SAID. GOOD COMPANY. ALL RIGHTS RESERVED
+    </div>
+    <hr class="custom-h2">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script> 
+</body>
+</html>
+
+
+
+
